@@ -1,0 +1,8 @@
+---
+
+- name: Install elasticsearch
+  dnf:
+    name: "{{ elasticsearch_packages }}"
+    state: installed
+
+...

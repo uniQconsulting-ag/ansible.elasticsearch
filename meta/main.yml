@@ -3,14 +3,13 @@
 galaxy_info:
   author: uniQconsulting ag
   company: uniqconsulting
-  role_name: <ROLENAME>
-  description: <DESCRIPTION>
+  role_name: elasticsearch
+  description: Installs and configures a basic single-instanc elasticsearch server
   min_ansible_version: 2.4
   license: GPLv3
   platforms:
   - name: EL
     versions:
-    - 7
     - 8
   galaxy_tags: []
 

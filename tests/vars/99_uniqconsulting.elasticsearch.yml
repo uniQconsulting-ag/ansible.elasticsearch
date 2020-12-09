@@ -1,8 +1,7 @@
 ---
-# Here belong all variables, that can be changed by a vars-file,
-# a playbook or a include.
 
 elasticsearch_jvm_heap: "{{ (ansible_memtotal_mb/2-1024)|round|int }}m" # default: Give it half the memory minus 1G
 elasticsearch_cluster_name: "elastic"
 
 ...
+

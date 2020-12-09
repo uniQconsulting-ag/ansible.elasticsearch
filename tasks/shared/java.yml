@@ -1,0 +1,6 @@
+---
+- name: Install Open JDK
+  dnf:
+    name: "{{ elasticsearch_packages_java }}"
+    state: installed
+...
