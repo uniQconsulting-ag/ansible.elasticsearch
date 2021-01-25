@@ -1,13 +1,5 @@
 ---
 
-# Role
-role_include_files: # add for example requirements.yml
-- repos.yml
-- java.yml
-- install.yml
-- config.yml
-
-
 elasticsearch_packages:
 - elasticsearch-oss
 
