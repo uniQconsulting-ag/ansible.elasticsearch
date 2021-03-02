@@ -33,6 +33,7 @@
   service:
     name: elasticsearch
     enabled: yes
+    state: started
   notify: restart elasticsearch
 
 ...

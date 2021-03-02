@@ -1,0 +1,29 @@
+---
+
+- name: download dependencies from galaxy
+  shell: ansible-galaxy install uniqconsulting.firewall
+  args:
+    creates: "{{ role_path }}/../uniqconsulting.firewall"
+      
+    
+- name: uniqconsulting.firewall
+  include_role:
+    name: uniqconsulting.firewall
+  vars:
+    firewall_open_ports:
+    - port: 9300
+      protocol: tcp
+      source: "{{ item }}"
+  with_items: "{{ elasticsearch_nodes }}"
+    
+- name: uniqconsulting.firewall
+  include_role:
+    name: uniqconsulting.firewall
+  vars:
+    firewall_open_ports:
+    - port: 9200
+      protocol: tcp
+      source: "{{ item }}"
+  with_items: "{{ elasticsearch_clients }}"
+
+...
